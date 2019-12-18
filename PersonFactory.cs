@@ -10,16 +10,27 @@ namespace MongoAddress
         public Person CreatePerson()
         {
             Person Abhinav = new Person();
-            Abhinav._id = 2;
-            Abhinav.FirstName = "Abhinav";
-            Abhinav.LastName = "Pradeep";
+            System.Console.WriteLine("Enter The _id of the document");
+            string personidstr = System.Console.ReadLine();
+            Int32.TryParse( personidstr, out int personid);
+            Abhinav._id = personid;
+            System.Console.WriteLine("Enter the customers first name");
+            Abhinav.FirstName = System.Console.ReadLine();
+            System.Console.WriteLine("Enter the customers last name");
+            Abhinav.LastName = System.Console.ReadLine();
 
             Address AbhinavAddress = new Address();
-            AbhinavAddress.Country = "Australia";
-            AbhinavAddress.State = "QLD";
-            AbhinavAddress.Area = "Buderim";
-            AbhinavAddress.Street = "Nyes Crescent";
-            AbhinavAddress.HouseNum = 42;
+            System.Console.WriteLine("Enter the customers country");
+            AbhinavAddress.Country = System.Console.ReadLine();
+            System.Console.WriteLine("Enter the customers state");
+            AbhinavAddress.State = System.Console.ReadLine();
+            System.Console.WriteLine("Enter the customers area");
+            AbhinavAddress.Area = System.Console.ReadLine();
+            System.Console.WriteLine("Enter the customers street");
+            AbhinavAddress.Street = System.Console.ReadLine();
+            System.Console.WriteLine("Enter the customes house number");
+           Int32.TryParse( System.Console.ReadLine(), out int inthouse);
+            AbhinavAddress.HouseNum = inthouse;
 
             Abhinav.Address = AbhinavAddress;
 
