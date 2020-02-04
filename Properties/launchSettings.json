@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "MongoAddress": {
-      "commandName": "Project",
-      "commandLineArgs": "List 3"
-    }
-  }
-}
